@@ -1,0 +1,47 @@
+{
+  "name": "unikit",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Unikit is a cross-platform UI component library. It provides production-ready components for both React (Web) and React Native (Mobile) with a single CLI tool (`npx unikit`).",
+  "workspaces": [
+    "apps/*",
+    "packages/*",
+    "playgrounds/*"
+  ],
+  "scripts": {
+    "dev:docs": "turbo run dev --filter=docs",
+    "dev:web": "turbo run dev --filter=playgrounds-web",
+    "dev:native": "turbo run dev --filter=playgrounds-native",
+    "build:docs": "turbo run build --filter=docs",
+    "build:cli": "turbo run build --filter=cli",
+    "build:web-components": "turbo run build --filter=components-web",
+    "build:native-components": "turbo run build --filter=components-native",
+    "build": "turbo run build",
+    "prepare": "husky"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.1",
+    "turbo": "^2.5.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,css,md,html,mdx,yml,yaml}": [
+      "prettier --write"
+    ]
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "ui-library",
+    "component-library",
+    "cross-platform",
+    "npx",
+    "cli"
+  ],
+  "author": "Pankaj Ghosh <dev.pankajghosh@gmail.com>",
+  "license": "MIT"
+}
