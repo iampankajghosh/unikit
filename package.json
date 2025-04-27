@@ -8,6 +8,10 @@
     "packages/*",
     "playgrounds/*"
   ],
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "npm@11.2.0",
   "scripts": {
     "dev:docs": "turbo run dev --filter=docs",
     "dev:web": "turbo run dev --filter=playgrounds-web",
@@ -20,17 +24,20 @@
     "prepare": "husky"
   },
   "devDependencies": {
+    "@eslint/js": "^9.25.1",
+    "eslint": "^9.25.1",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^15.5.1",
-    "turbo": "^2.5.2"
+    "prettier": "^3.5.3",
+    "turbo": "^2.5.2",
+    "typescript-eslint": "^8.31.0"
   },
   "lint-staged": {
-    "*.{js,jsx,ts,tsx}": [
-      "eslint --fix",
-      "prettier --write"
-    ],
-    "*.{json,css,md,html,mdx,yml,yaml}": [
-      "prettier --write"
+    "*.{js,jsx,ts,tsx,json,css,md}": [
+      "prettier --write",
+      "eslint --fix"
     ]
   },
   "keywords": [
