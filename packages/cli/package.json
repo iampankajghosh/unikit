@@ -1,0 +1,14 @@
+{
+  "name": "unikit-cli",
+  "version": "0.0.1",
+  "bin": {
+    "unikit": "./index.js"
+  },
+  "type": "module",
+  "dependencies": {
+    "chalk": "^5.0.0",
+    "detect-installed": "^2.0.4",
+    "fs-extra": "^11.0.0",
+    "inquirer": "^9.0.0"
+  }
+}
